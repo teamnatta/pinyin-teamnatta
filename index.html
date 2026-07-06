@@ -476,6 +476,38 @@
         }
         .option-card:hover { background: #fff8e1; border-color: var(--china-gold); transform: translateY(-3px); box-shadow: 0 6px 12px rgba(255,179,0,0.15); }
 
+        /* หน้าเกี่ยวกับเว็บ (About Page) */
+        .about-container {
+            max-width: 700px;
+            margin: 20px auto;
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            border: 2px solid #e2d9c8;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+        }
+        .about-title {
+            color: var(--primary-red);
+            font-size: 24px;
+            font-weight: 700;
+            border-bottom: 2px solid var(--china-gold);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .credit-box {
+            background: #fafafa;
+            border-left: 5px solid var(--primary-red);
+            padding: 15px 20px;
+            margin-top: 15px;
+            border-radius: 0 12px 12px 0;
+        }
+        .credit-box h4 { font-size: 16px; color: #333; margin-bottom: 8px; }
+        .credit-box ul { padding-left: 20px; color: #555; font-size: 14px; line-height: 1.8; }
+        .credit-box ul li strong { color: #000; }
+
         /* ส่วนท้ายเว็บและโซนเครดิต (Footer Area) */
         .footer-wrapper {
             margin-top: auto;
@@ -498,6 +530,7 @@
         <div class="sidebar-item" data-target="finals" onclick="switchPage('finals')"><span class="cn-icon">韵</span>สระเดี่ยว</div>
         <div class="sidebar-item" data-target="tones" onclick="switchPage('tones')"><i class="fa-solid fa-arrow-trend-up"></i>วรรณยุกต์</div>
         <div class="sidebar-item" data-target="quiz" onclick="switchPage('quiz')"><i class="fa-solid fa-gamepad"></i>เกมควิซ</div>
+        <div class="sidebar-item" data-target="about" onclick="switchPage('about')"><i class="fa-solid fa-circle-info"></i>เกี่ยวกับเว็บ</div>
         <div style="font-size: 28px; margin-top: auto; padding-bottom: 20px;">🏮</div>
     </div>
 
@@ -517,6 +550,7 @@
                 <div class="nav-btn" data-target="finals" onclick="switchPage('finals')"><span class="cn-icon-sm">韵</span>สระเดี่ยว</div>
                 <div class="nav-btn" data-target="tones" onclick="switchPage('tones')"><i class="fa-solid fa-wand-magic-sparkles"></i>วรรณยุกต์</div>
                 <div class="nav-btn" data-target="quiz" onclick="switchPage('quiz')"><i class="fa-solid fa-trophy"></i>แบบฝึกหัด</div>
+                <div class="nav-btn" data-target="about" onclick="switchPage('about')"><i class="fa-solid fa-circle-info"></i>เกี่ยวกับ</div>
             </div>
         </div>
 
@@ -529,6 +563,7 @@
             <p>ระบบออกเสียงประยุกต์พร้อมสื่อเข้าใจง่าย โดยเหล่าซือทีม</p>
         </div>
 
+        <!-- หน้าหลัก (Home) -->
         <div id="page-home" class="page active">
             <div class="content-grid">
                 <div id="box-initials" class="card-zone initials-zone"></div>
@@ -541,6 +576,7 @@
         <div id="page-finals" class="page full-page-view final-view-adjust"><div id="holder-finals"></div></div>
         <div id="page-tones" class="page full-page-view"><div id="holder-tones"></div></div>
 
+        <!-- หน้าแบบฝึกหัด (Quiz) -->
         <div id="page-quiz" class="page">
             <div class="quiz-container">
                 <h2 style="color: #e65100; font-size: 26px;">🎮 เกมฟังเสียงปริศนาทายพินอิน</h2>
@@ -556,6 +592,33 @@
             </div>
         </div>
 
+        <!-- หน้าเกี่ยวกับ (About) และ เครดิตเสียง -->
+        <div id="page-about" class="page">
+            <div class="about-container">
+                <div class="about-title">
+                    <i class="fa-solid fa-circle-info"></i> เกี่ยวกับระบบและเครดิตสื่อเสริม
+                </div>
+                <p style="color: #444; line-height: 1.6; margin-bottom: 15px; font-weight: 600;">
+                    ระบบออกเสียงประยุกต์พร้อมสื่อเข้าใจง่ายนี้ พัฒนาขึ้นโดย เหล่าซือทีม เพื่อเป็นสื่อนวัตกรรมการเรียนการสอนระบบเสียงพินอินภาษาจีนสำหรับนักเรียนและผู้ที่สนใจศึกษาเบื้องต้น
+                </p>
+                
+                <div class="credit-box">
+                    <h4>📢 เครดิตแหล่งที่มาของไฟล์เสียง (Audio Credits)</h4>
+                    <p style="font-size: 13px; color: #666; margin-bottom: 8px;">
+                        สื่อการสอนนี้มีการอ้างอิงและนำชุดเสียงระบบพินอินและวรรณยุกต์คุณภาพสูงมาจากช่อง YouTube เพื่อการศึกษา ดังต่อไปนี้:
+                    </p>
+                    <ul>
+                        <li>🎬 ช่อง <strong>ChineseFor.Us - Learn Mandarin Chinese Online</strong></li>
+                        <li>🎬 ช่อง <strong>JOY CHINESE</strong></li>
+                    </ul>
+                    <p style="font-size: 12px; color: #888; margin-top: 10px; font-style: italic;">
+                        *ทางผู้จัดทำขอขอบพระคุณเจ้าของช่องสื่อการสอนทั้งสองช่องเป็นอย่างสูง ที่ได้เผยแพร่สื่อความรู้ที่เป็นประโยชน์ต่อการศึกษาภาษาจีนมา ณ ที่นี้
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ส่วนท้ายเว็บ -->
         <div class="footer-wrapper">
             <div class="bottom-footer">🧧 ฝึกบ่อย ๆ พูดชัด ๆ เก่งภาษาจีนได้อย่างแน่นอนครับ! 🧧</div>
             <div class="credit-footer">
@@ -632,7 +695,6 @@
         <div id="raw-tones">
             <div class="zone-header"><span>📈 วรรณยุกต์ 4 เสียง (Tones)</span></div>
             <div class="tones-list">
-                <!-- วรรณยุกต์เสียงที่ 1 -->
                 <div class="tone-row">
                     <div class="tone-main" onclick="speakToneWithAnimation('tone1', 1)">ā</div>
                     <div class="tone-info">เสียงที่ 1<br><span style="color:#777; font-weight:normal;">(เสียงระดับราบ)</span></div>
@@ -645,7 +707,6 @@
                         <div class="tone-example" onclick="speakToneWithAnimation('a1', 1)">ā <p style="font-size:12px;color:#888;font-weight:normal;">(อา)</p></div>
                     </div>
                 </div>
-                <!-- วรรณยุกต์เสียงที่ 2 -->
                 <div class="tone-row">
                     <div class="tone-main" onclick="speakToneWithAnimation('tone2', 2)">á</div>
                     <div class="tone-info">เสียงที่ 2<br><span style="color:#777; font-weight:normal;">(เสียงไต่เนินขึ้น)</span></div>
@@ -658,7 +719,6 @@
                         <div class="tone-example" onclick="speakToneWithAnimation('a2', 2)">á <p style="font-size:12px;color:#888;font-weight:normal;">(อ๋า)</p></div>
                     </div>
                 </div>
-                <!-- วรรณยุกต์เสียงที่ 3 -->
                 <div class="tone-row">
                     <div class="tone-main" onclick="speakToneWithAnimation('tone3', 3)">ǎ</div>
                     <div class="tone-info">เสียงที่ 3<br><span style="color:#777; font-weight:normal;">(เสียงลงแอ่งแล้วตวัดขึ้น)</span></div>
@@ -671,7 +731,6 @@
                         <div class="tone-example" onclick="speakToneWithAnimation('a3', 3)">ǎ <p style="font-size:12px;color:#888;font-weight:normal;">(อ่า)</p></div>
                     </div>
                 </div>
-                <!-- วรรณยุกต์เสียงที่ 4 -->
                 <div class="tone-row">
                     <div class="tone-main" onclick="speakToneWithAnimation('tone4', 4)">à</div>
                     <div class="tone-info">เสียงที่ 4<br><span style="color:#777; font-weight:normal;">(เสียงดิ่งเนินลง)</span></div>
@@ -700,7 +759,7 @@
             currentAudio = new Audio(fileName + '.mp3');
 
             currentAudio.onerror = function() {
-                console.log("เลโอบอกต่อ: ไม่พบไฟล์เสียงชื่อ " + fileName + ".mp3 กรุณาเช็กชื่อไฟล์อีกครั้งครับ");
+                console.log("ข้อความระบบ: ไม่พบไฟล์เสียงชื่อ " + fileName + ".mp3 ในพื้นที่ของ GitHub");
             };
 
             currentAudio.play().catch(function(error) {
@@ -749,11 +808,20 @@
             pages.forEach(p => p.classList.remove('active'));
             document.getElementById('page-' + targetPageId).classList.add('active');
 
+            // เปลี่ยนสถานะเมนูด้านบน
             let topNavBtns = document.querySelectorAll('.nav-btn');
             topNavBtns.forEach(btn => {
                 if(btn.getAttribute('data-target') === targetPageId) btn.classList.add('active');
                 else btn.classList.remove('active');
             });
+
+            // เปลี่ยนสถานะเมนูด้านข้าง
+            let sidebarItems = document.querySelectorAll('.sidebar-item');
+            sidebarItems.forEach(item => {
+                if(item.getAttribute('data-target') === targetPageId) item.classList.add('active');
+                else item.classList.remove('active');
+            });
+
             window.scrollTo({top: 0, behavior: 'smooth'});
         }
 
